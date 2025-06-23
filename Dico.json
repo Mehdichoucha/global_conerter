@@ -1,0 +1,380 @@
+{
+  "A": {
+    "binary": "01000001",
+    "decimal": 65,
+    "hex": "41",
+    "octal": "101"
+  },
+  "B": {
+    "binary": "01000010",
+    "decimal": 66,
+    "hex": "42",
+    "octal": "102"
+  },
+  "C": {
+    "binary": "01000011",
+    "decimal": 67,
+    "hex": "43",
+    "octal": "103"
+  },
+  "D": {
+    "binary": "01000100",
+    "decimal": 68,
+    "hex": "44",
+    "octal": "104"
+  },
+  "E": {
+    "binary": "01000101",
+    "decimal": 69,
+    "hex": "45",
+    "octal": "105"
+  },
+  "F": {
+    "binary": "01000110",
+    "decimal": 70,
+    "hex": "46",
+    "octal": "106"
+  },
+  "G": {
+    "binary": "01000111",
+    "decimal": 71,
+    "hex": "47",
+    "octal": "107"
+  },
+  "H": {
+    "binary": "01001000",
+    "decimal": 72,
+    "hex": "48",
+    "octal": "110"
+  },
+  "I": {
+    "binary": "01001001",
+    "decimal": 73,
+    "hex": "49",
+    "octal": "111"
+  },
+  "J": {
+    "binary": "01001010",
+    "decimal": 74,
+    "hex": "4A",
+    "octal": "112"
+  },
+  "K": {
+    "binary": "01001011",
+    "decimal": 75,
+    "hex": "4B",
+    "octal": "113"
+  },
+  "L": {
+    "binary": "01001100",
+    "decimal": 76,
+    "hex": "4C",
+    "octal": "114"
+  },
+  "M": {
+    "binary": "01001101",
+    "decimal": 77,
+    "hex": "4D",
+    "octal": "115"
+  },
+  "N": {
+    "binary": "01001110",
+    "decimal": 78,
+    "hex": "4E",
+    "octal": "116"
+  },
+  "O": {
+    "binary": "01001111",
+    "decimal": 79,
+    "hex": "4F",
+    "octal": "117"
+  },
+  "P": {
+    "binary": "01010000",
+    "decimal": 80,
+    "hex": "50",
+    "octal": "120"
+  },
+  "Q": {
+    "binary": "01010001",
+    "decimal": 81,
+    "hex": "51",
+    "octal": "121"
+  },
+  "R": {
+    "binary": "01010010",
+    "decimal": 82,
+    "hex": "52",
+    "octal": "122"
+  },
+  "S": {
+    "binary": "01010011",
+    "decimal": 83,
+    "hex": "53",
+    "octal": "123"
+  },
+  "T": {
+    "binary": "01010100",
+    "decimal": 84,
+    "hex": "54",
+    "octal": "124"
+  },
+  "U": {
+    "binary": "01010101",
+    "decimal": 85,
+    "hex": "55",
+    "octal": "125"
+  },
+  "V": {
+    "binary": "01010110",
+    "decimal": 86,
+    "hex": "56",
+    "octal": "126"
+  },
+  "W": {
+    "binary": "01010111",
+    "decimal": 87,
+    "hex": "57",
+    "octal": "127"
+  },
+  "X": {
+    "binary": "01011000",
+    "decimal": 88,
+    "hex": "58",
+    "octal": "130"
+  },
+  "Y": {
+    "binary": "01011001",
+    "decimal": 89,
+    "hex": "59",
+    "octal": "131"
+  },
+  "Z": {
+    "binary": "01011010",
+    "decimal": 90,
+    "hex": "5A",
+    "octal": "132"
+  },
+  "a": {
+    "binary": "01100001",
+    "decimal": 97,
+    "hex": "61",
+    "octal": "141"
+  },
+  "b": {
+    "binary": "01100010",
+    "decimal": 98,
+    "hex": "62",
+    "octal": "142"
+  },
+  "c": {
+    "binary": "01100011",
+    "decimal": 99,
+    "hex": "63",
+    "octal": "143"
+  },
+  "d": {
+    "binary": "01100100",
+    "decimal": 100,
+    "hex": "64",
+    "octal": "144"
+  },
+  "e": {
+    "binary": "01100101",
+    "decimal": 101,
+    "hex": "65",
+    "octal": "145"
+  },
+  "f": {
+    "binary": "01100110",
+    "decimal": 102,
+    "hex": "66",
+    "octal": "146"
+  },
+  "g": {
+    "binary": "01100111",
+    "decimal": 103,
+    "hex": "67",
+    "octal": "147"
+  },
+  "h": {
+    "binary": "01101000",
+    "decimal": 104,
+    "hex": "68",
+    "octal": "150"
+  },
+  "i": {
+    "binary": "01101001",
+    "decimal": 105,
+    "hex": "69",
+    "octal": "151"
+  },
+  "j": {
+    "binary": "01101010",
+    "decimal": 106,
+    "hex": "6A",
+    "octal": "152"
+  },
+  "k": {
+    "binary": "01101011",
+    "decimal": 107,
+    "hex": "6B",
+    "octal": "153"
+  },
+  "l": {
+    "binary": "01101100",
+    "decimal": 108,
+    "hex": "6C",
+    "octal": "154"
+  },
+  "m": {
+    "binary": "01101101",
+    "decimal": 109,
+    "hex": "6D",
+    "octal": "155"
+  },
+  "n": {
+    "binary": "01101110",
+    "decimal": 110,
+    "hex": "6E",
+    "octal": "156"
+  },
+  "o": {
+    "binary": "01101111",
+    "decimal": 111,
+    "hex": "6F",
+    "octal": "157"
+  },
+  "p": {
+    "binary": "01110000",
+    "decimal": 112,
+    "hex": "70",
+    "octal": "160"
+  },
+  "q": {
+    "binary": "01110001",
+    "decimal": 113,
+    "hex": "71",
+    "octal": "161"
+  },
+  "r": {
+    "binary": "01110010",
+    "decimal": 114,
+    "hex": "72",
+    "octal": "162"
+  },
+  "s": {
+    "binary": "01110011",
+    "decimal": 115,
+    "hex": "73",
+    "octal": "163"
+  },
+  "t": {
+    "binary": "01110100",
+    "decimal": 116,
+    "hex": "74",
+    "octal": "164"
+  },
+  "u": {
+    "binary": "01110101",
+    "decimal": 117,
+    "hex": "75",
+    "octal": "165"
+  },
+  "v": {
+    "binary": "01110110",
+    "decimal": 118,
+    "hex": "76",
+    "octal": "166"
+  },
+  "w": {
+    "binary": "01110111",
+    "decimal": 119,
+    "hex": "77",
+    "octal": "167"
+  },
+  "x": {
+    "binary": "01111000",
+    "decimal": 120,
+    "hex": "78",
+    "octal": "170"
+  },
+  "y": {
+    "binary": "01111001",
+    "decimal": 121,
+    "hex": "79",
+    "octal": "171"
+  },
+  "z": {
+    "binary": "01111010",
+    "decimal": 122,
+    "hex": "7A",
+    "octal": "172"
+  },
+  "0": {
+    "binary": "00110000",
+    "decimal": 48,
+    "hex": "30",
+    "octal": "60"
+  },
+  "1": {
+    "binary": "00110001",
+    "decimal": 49,
+    "hex": "31",
+    "octal": "61"
+  },
+  "2": {
+    "binary": "00110010",
+    "decimal": 50,
+    "hex": "32",
+    "octal": "62"
+  },
+  "3": {
+    "binary": "00110011",
+    "decimal": 51,
+    "hex": "33",
+    "octal": "63"
+  },
+  "4": {
+    "binary": "00110100",
+    "decimal": 52,
+    "hex": "34",
+    "octal": "64"
+  },
+  "5": {
+    "binary": "00110101",
+    "decimal": 53,
+    "hex": "35",
+    "octal": "65"
+  },
+  "6": {
+    "binary": "00110110",
+    "decimal": 54,
+    "hex": "36",
+    "octal": "66"
+  },
+  "7": {
+    "binary": "00110111",
+    "decimal": 55,
+    "hex": "37",
+    "octal": "67"
+  },
+  "8": {
+    "binary": "00111000",
+    "decimal": 56,
+    "hex": "38",
+    "octal": "70"
+  },
+  "9": {
+    "binary": "00111001",
+    "decimal": 57,
+    "hex": "39",
+    "octal": "71"
+  },
+  " ": {
+    "binary": "00100000",
+    "decimal": 32,
+    "hex": "20",
+    "octal": "40"
+  }
+}
