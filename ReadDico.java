@@ -5,6 +5,11 @@ import java.util.regex.Pattern;
 import java.util.Scanner;
 
 public class ReadDico {
+    int binary = 1;
+    int decimal = 2;
+    int hexadecimal = 3;
+    int octal = 4;
+    int text = 5;
 
     public static void readDico(String caractere) throws Exception {
         //read Dico.json file
