@@ -11,15 +11,38 @@ public class ReadDico {
     int octal = 4;
     int text = 5;
 
-    public static void readDico(String caractere) throws Exception {
+    public static void readDico(String caractere, int language) throws Exception {
+        //selected language
+        String lang = "";
+        switch (language) {
+            case 1:
+                lang = "binary";
+                break;
+            case 2:
+                lang = "decimal";
+                break;
+            case 3:
+                lang = "hex";
+                break;
+            case 4:
+                lang = "octal";
+                break;
+            case 5:
+                lang = "text";
+                break;
+            default:
+                System.out.println("Langue non prise en charge");
+                return;
+        }
+
         //read Dico.json file
         String content = new String(Files.readAllBytes(Paths.get("Dico.json")));
-        String regex = "\"" + Pattern.quote(caractere) + "\"\\s*:\\s*\\{[^}]*\"binary\"\\s*:\\s*\"([01]+)\"";
-        Pattern pattern = Pattern.compile(regex);
+        String regex = "\"" + Pattern.quote(caractere) + "\"\\s*:\\s*\\{[^}]*\"" + lang + "\"\\s*:\\s*\"([^\"]+)\"";
+        Pattern pattern = Pattern.compile(regex, Pattern.DOTALL);
         Matcher matcher = pattern.matcher(content);
         if (matcher.find()) {
-            String binary = matcher.group(1);
-            System.out.print(binary);
+            String value = matcher.group(1);
+            System.out.print(value);
         } else {
             System.out.println("Valeur non trouvée pour : " + caractere);
         }
@@ -30,7 +53,7 @@ public class ReadDico {
         System.out.print("Entrez une chaîne de caractères : ");
         String input = scanner.nextLine();
         for (char c : input.toCharArray()) {
-            readDico(String.valueOf(c));
+            readDico(String.valueOf(c), 3);
         }
         scanner.close();
     }
