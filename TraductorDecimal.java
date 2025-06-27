@@ -17,4 +17,17 @@ public class TraductorDecimal extends ReadInput{ //a comme parent class ReadDico
             System.out.println("Valeur non trouvée pour : " + caractere);
         }
     }
+
+    public static void readDicoInverse(String decimalValue) throws Exception {
+        String content = new String(Files.readAllBytes(Paths.get("Dico.json")));
+        String regex = "\"([^\"]+)\"\\s*:\\s*\\{[^}]*\"decimal\"\\s*:\\s*\"" + Pattern.quote(decimalValue) + "\"";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(content);
+        if (matcher.find()) {
+            String caractere = matcher.group(1);
+            System.out.print(caractere);
+        } else {
+            System.out.println("Caractère non trouvé pour : " + decimalValue);
+        }
+    }
 }
