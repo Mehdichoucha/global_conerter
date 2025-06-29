@@ -6,76 +6,71 @@ public class ReadInput {
         while (true) {
             System.out.print("Choisissez le sens de traduction (1: texte vers code, 2: code vers texte, 0: quitter) : ");
             int mode = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
 
             if (mode == 0) {
                 System.out.println("Au revoir !");
                 break;
             }
 
+            TraductorStrategy traductor = null;
+
             if (mode == 1) {
                 System.out.print("Entrez une chaîne de caractères : ");
                 String input = scanner.nextLine();
                 System.out.print("Entrez une langue (1: binaire, 2: décimal, 3: hexadécimal, 4: octal) : ");
                 int choice = scanner.nextInt();
-                scanner.nextLine(); 
-                if (choice == 1){
-                    for (int i = 0; i < input.length(); i++) {
-                        char c = input.charAt(i);
-                        TraductorBinary.readDicoBinary(String.valueOf(c));
-                    }
+                scanner.nextLine();
+
+                switch (choice) {
+                    case 1:
+                        traductor = new TraductorBinary();
+                        break;
+                    case 2:
+                        traductor = new TraductorDecimal();
+                        break;
+                    case 3:
+                        traductor = new TraductorHexa();
+                        break;
+                    case 4:
+                        traductor = new TraductorOctal();
+                        break;
+                    default:
+                        System.out.println("Choix invalide.");
+                        continue;
                 }
-                if (choice == 2){
-                    for (int i = 0; i < input.length(); i++) {
-                        char c = input.charAt(i);
-                        TraductorDecimal.readDicoDecimal(String.valueOf(c));
-                    }
+
+                for (int i = 0; i < input.length(); i++) {
+                    char c = input.charAt(i);
+                    traductor.readDico(String.valueOf(c));
                 }
-                if (choice == 3){
-                    for (int i = 0; i < input.length(); i++) {
-                        char c = input.charAt(i);
-                        TraductorHexa.readDicoHexa(String.valueOf(c));
-                    }
-                }
-                if (choice == 4){
-                    for (int i = 0; i < input.length(); i++) {
-                        char c = input.charAt(i);
-                        TraductorOctal.readDicoOctal(String.valueOf(c));
-                    }
-                }
-                System.out.println(); // retour à la ligne après la traduction
+                System.out.println();
             } else if (mode == 2) {
                 System.out.print("Entrez le code à traduire (séparez chaque valeur par un espace) : ");
                 String input = scanner.nextLine();
-                System.out.print("Entrez le type de code (1: binaire, 2: décimal, 3: hexadécimal, 4: octal) : ");
-                int choice = scanner.nextInt();
-                scanner.nextLine(); // consomme le retour à la ligne
                 String[] codes = input.split("\\s+");
-                if (choice == 1){
-                    for (String code : codes) {
-                        TraductorBinary.readDicoInverse(code);
+
+                for (String code : codes) {
+                    if (code.matches("[01]{8}")) { // 8 bits binaire
+                        traductor = new TraductorBinary();
+                    } else if (code.matches("\\d{1,3}")) { // décimal (0-255)
+                        traductor = new TraductorDecimal();
+                    } else if (code.matches("[0-9A-Fa-f]{2}")) { // hexa (2 chiffres/lettres)
+                        traductor = new TraductorHexa();
+                    } else if (code.matches("[0-7]{3}")) { // octal (3 chiffres)
+                        traductor = new TraductorOctal();
+                    } else {
+                        System.out.print("?");
+                        continue;
                     }
+                    traductor.readDicoInverse(code);
                 }
-                if (choice == 2){
-                    for (String code : codes) {
-                        TraductorDecimal.readDicoInverse(code);
-                    }
-                }
-                if (choice == 3){
-                    for (String code : codes) {
-                        TraductorHexa.readDicoInverse(code);
-                    }
-                }
-                if (choice == 4){
-                    for (String code : codes) {
-                        TraductorOctal.readDicoInverse(code);
-                    }
-                }
-                System.out.println(); // retour à la ligne après la traduction
+                System.out.println();
             } else {
                 System.out.println("Choix invalide.");
             }
         }
         scanner.close();
+        
     }
 }
