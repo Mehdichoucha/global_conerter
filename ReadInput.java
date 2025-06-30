@@ -4,9 +4,9 @@ public class ReadInput {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.print("Choisissez le sens de traduction (1: texte vers code, 2: code vers texte, 0: quitter) : ");
+            System.out.print("Choisissez le sens de traduction (1: texte vers code, 2: code vers texte, 3: chiffrement Cesar, 0: quitter) : ");
             int mode = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // vide le buffer
 
             if (mode == 0) {
                 System.out.println("Au revoir !");
@@ -16,9 +16,9 @@ public class ReadInput {
             TraductorStrategy traductor = null;
 
             if (mode == 1) {
-                System.out.print("Entrez une chaîne de caractères : ");
+                System.out.print("Entrez une chaine de caracteres : ");
                 String input = scanner.nextLine();
-                System.out.print("Entrez une langue (1: binaire, 2: décimal, 3: hexadécimal, 4: octal) : ");
+                System.out.print("Entrez une langue (1: binaire, 2: decimal, 3: hexadecimal, 4: octal) : ");
                 int choice = scanner.nextInt();
                 scanner.nextLine();
 
@@ -46,14 +46,14 @@ public class ReadInput {
                 }
                 System.out.println();
             } else if (mode == 2) {
-                System.out.print("Entrez le code à traduire (séparez chaque valeur par un espace) : ");
+                System.out.print("Entrez le code a traduire (separez chaque valeur par un espace) : ");
                 String input = scanner.nextLine();
                 String[] codes = input.split("\\s+");
 
                 for (String code : codes) {
                     if (code.matches("[01]{8}")) { // 8 bits binaire
                         traductor = new TraductorBinary();
-                    } else if (code.matches("\\d{1,3}")) { // décimal (0-255)
+                    } else if (code.matches("\\d{1,3}")) { // decimal (0-255)
                         traductor = new TraductorDecimal();
                     } else if (code.matches("[0-9A-Fa-f]{2}")) { // hexa (2 chiffres/lettres)
                         traductor = new TraductorHexa();
@@ -66,11 +66,19 @@ public class ReadInput {
                     traductor.readDicoInverse(code);
                 }
                 System.out.println();
+            } else if (mode == 3) {
+                System.out.print("Entrez le texte a chiffrer : ");
+                String texte = scanner.nextLine();
+                System.out.print("Entrez le decalage (cle) : ");
+                String keyString = scanner.nextLine();
+                int key = Integer.parseInt(keyString.trim());
+
+                String encrypted = Cesar.encrypt(texte, key);
+                System.out.println("Texte chiffre : " + encrypted);
             } else {
                 System.out.println("Choix invalide.");
             }
         }
         scanner.close();
-        
     }
 }
